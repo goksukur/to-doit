@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegCircle, FaRegTrashAlt , FaRegCheckCircle } from "react-icons/fa";
 
 const ToDoItem = ({ToDo, toggle, deleteToDo}) => {
