@@ -45,19 +45,19 @@ const ToDo = () => {
       }, [toDos]);
 
   return (
-    <div className='place-self-center bg-[#F9F7F7] w-[400px] h-[600px] p-12 flex flex-col gap-5 rounded-xl'>
-        {/* Başlık */}
+    <div className='place-self-center bg-[#F9F7F7] w-[90vw] h-[80vh] md:w-[400px] md:h-[600px] p-12 flex flex-col gap-5 rounded-xl'>
+        {/* Title */}
         <h1 className='text-3xl font-semibold tracking-wider flex gap-2 items-center text-[#3F72AF]'>
             to-do it!
         </h1>
-        {/* Arama */}
+        {/* Search */}
         <div className='flex h-10 items-center bg-[#DBE2EF] rounded-xl'>
             <input ref={data} type='text' className='border-none outline-none p-1 flex-1 bg-transparent rounded-xl placeholder:text-[#3F72AF] text-[#3F72AF]' placeholder='do it!' onKeyDown={(e) => { if (e.key === "Enter") { addToDos();}}}/>
             <div className='bg-[#3F72AF] h-full w-8 flex items-center justify-center rounded-r-xl cursor-pointer' onClick={() => addToDos()}>
                 <FaPlus  className='size-3 text-[#DBE2EF]'/>
             </div>
         </div>
-        {/* Listeleme */}
+        {/* Listing */}
         <div className='mt-5 overflow-y-auto max-h-[400px]'>
             {
                 toDos.map(ToDo => (
